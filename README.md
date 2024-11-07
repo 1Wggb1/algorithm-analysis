@@ -1,1 +1,4 @@
 # algorithm-analysis
+
+
+[Cormen book](https://computerscience360.wordpress.com/wp-content/uploads/2018/02/algoritmos-teoria-e-prc3a1tica-3ed-thomas-cormen.pdf)
