@@ -1,32 +1,26 @@
 #include <stdio.h>
 
-#include "lista_ligada.h"
-//#include "lista_ligada_circular.h"
+#include "lista_sequencial.h"
 
 int main(){
 
 	int x;
-	ListaLigada * lista = cria_lista();	
+
+	ListaSequencial * lista = cria_lista();
 
 	imprime(lista);
 	printf("------------------------------------------------------------------------------------\n");
 
-#ifdef LISTA_ORDENADA
-	insere(lista, 3);
-	insere(lista, 1);
-	insere(lista, 5);
-	insere(lista, 4);
-	insere(lista, 2);
-#else
 	insere(lista, 3, 0);
 	insere(lista, 1, 1);
 	insere(lista, 5, 2);
 	insere(lista, 4, 3);
 	insere(lista, 2, 4);
-#endif
 
 	imprime(lista);
 	printf("tamanho da lista: %d\n", tamanho(lista));
+
+	printf("------------------------------------------------------------------------------------\n");
 
 	x = 1;
 	printf("indice do elemento %d: %d\n", x, busca(lista, x));
@@ -39,14 +33,11 @@ int main(){
 
 	printf("------------------------------------------------------------------------------------\n");
 
-#ifdef LISTA_ORDENADA
-	insere(lista, 6);
-#else
 	insere(lista, 6, 2);
-#endif
-
 	imprime(lista);
 	printf("tamanho da lista: %d\n", tamanho(lista));
+
+	printf("------------------------------------------------------------------------------------\n");
 
 	x = 1;
 	printf("indice do elemento %d: %d\n", x, busca(lista, x));
@@ -63,6 +54,8 @@ int main(){
 	remove_elemento(lista, 5);
 	imprime(lista);
 	printf("tamanho da lista: %d\n", tamanho(lista));
+
+	printf("------------------------------------------------------------------------------------\n");
 
 	x = 1;
 	printf("indice do elemento %d: %d\n", x, busca(lista, x));
